@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.vault.demo</groupId>
-    <artifactId>vault</artifactId>
+    <artifactId>vaultDemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>vault</name>
+    <name>vaultDemo</name>
 
     <properties>
         <java.version>11</java.version>

@@ -1,4 +1,4 @@
-package com.vault.demo.vault;
+package com.vault.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

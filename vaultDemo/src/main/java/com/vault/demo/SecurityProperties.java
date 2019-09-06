@@ -1,4 +1,4 @@
-package com.vault.demo.vault;
+package com.vault.demo;
 
 import lombok.Getter;
 import lombok.Setter;
