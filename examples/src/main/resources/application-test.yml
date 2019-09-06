@@ -1,0 +1,18 @@
+#driverDocType2Category:
+#  MOTO:A
+#  CAR:B
+#  TRUCK:C
+#  BUS:D
+#
+driverDocType2Categories:
+  MOTO: A,A1,A2
+  CAR: B,B1,B2
+  TRUCK: C.C1,C2
+  BUS: D,D1,D2
+
+test_bean_map:
+  beanOne: beanOne
+  beanTwo: beanTwo
+
+start.flag:
+  true

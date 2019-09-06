@@ -1,0 +1,31 @@
+{
+
+  "hints": [
+    {
+    "name": "my.app.security.login",
+    "values": [
+      {
+        "value": "test_login",
+        "description": "get asses for test environment."
+      },
+      {
+        "value" : "login",
+        "description": "real login."
+      }
+    ]
+    },
+    {
+      "name": "my.app.security.url",
+      "values": [
+        {
+          "value": "tech_url",
+          "description": "for work with test API."
+        },
+        {
+          "value" : "prod_url",
+          "description": "for use real API."
+        }
+      ]
+    }
+  ]
+}
