@@ -1,6 +1,32 @@
 {
-
   "hints": [
+    {
+      "name": "test-bean-map.beanOne",
+      "values": [
+        {
+          "value": "beanOne",
+          "description": "beanOne name."
+        }
+      ]
+    },
+    {
+      "name": "test-bean-map.beanTwo",
+      "values": [
+        {
+          "value": "beanOne",
+          "description": "test_bean_map.beanTwo name."
+        }
+      ]
+    },
+    {
+      "name": "test-bean-map.beanThree",
+      "values": [
+        {
+          "value": "beanOne",
+          "description": "beanThree name."
+        }
+      ]
+    },
     {
     "name": "my.app.security.login",
     "values": [
