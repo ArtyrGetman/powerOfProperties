@@ -10,9 +10,6 @@ driverDocType2Categories:
   TRUCK: C.C1,C2
   BUS: D,D1,D2
 
-test_bean_map:
-  beanOne: beanOne
-  beanTwo: beanTwo
 
 start.flag:
   true
@@ -27,3 +24,5 @@ start.check.date:
   24-08-2019
 start.check:date_format:
   dd-MM-yyyy
+sender:
+  type-list: email,sms,push
