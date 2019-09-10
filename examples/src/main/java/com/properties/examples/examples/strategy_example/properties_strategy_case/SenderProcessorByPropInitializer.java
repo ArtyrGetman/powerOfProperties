@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Getter
 @Component
@@ -19,13 +20,17 @@ public class SenderProcessorByPropInitializer {
     private final ApplicationContext applicationContext;
     final List<String> typeList = new ArrayList<>();
     final Map<String, MessageSender> senderMap = new HashMap<>();
+
     public SenderProcessorByPropInitializer(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
+
     @PostConstruct
     public void initMap() {
         for (String senderId : typeList) {
-            senderMap.put(senderId, (MessageSender)applicationContext.getBean(senderId));
+            senderMap.put(senderId, (MessageSender) applicationContext.getBean(senderId));
         }
+        //       senderMap = typeList.stream()
+        //       .collect(Collectors.toMap(senderId -> senderId, sender -> (MessageSender)applicationContext.getBean(sender)));
     }
 }

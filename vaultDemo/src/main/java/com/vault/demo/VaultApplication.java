@@ -8,23 +8,24 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
-
 @SpringBootApplication
 @RequiredArgsConstructor
 @Log4j2
 public class VaultApplication implements CommandLineRunner {
-
     private final SecurityProperties securityProperties;
-
     @Value("${app.test-config.password}")
     String password;
     @Value("#{'${app.test-config.roles}'.split(',')}")
     List<String> roles;
 
+    @Value("${test}")
+    String test;
+    @Value("${test_key}")
+    String testKey;
+
     public static void main(String[] args) {
         SpringApplication.run(VaultApplication.class, args);
     }
-
     @Override
     public void run(String... args) throws Exception {
         log.info("----------------------------------------");
@@ -41,6 +42,7 @@ public class VaultApplication implements CommandLineRunner {
         log.info("         password  {}", password);
         log.info("         roles  {}", roles);
         log.info("----------------------------------------");
+        System.out.println(test);
+        System.out.println(testKey);
     }
-
 }
