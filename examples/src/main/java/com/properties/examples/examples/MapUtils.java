@@ -1,6 +1,7 @@
 package com.properties.examples.examples;
 
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,8 @@ import java.util.Map;
 @Component
 @ConfigurationProperties()
 public class MapUtils {
+
+
 
     public final Map<String, String> driverDocType2Category = new HashMap<>();
     private final Map<String, List<String>> driverDocType2Categories = new HashMap<>();
