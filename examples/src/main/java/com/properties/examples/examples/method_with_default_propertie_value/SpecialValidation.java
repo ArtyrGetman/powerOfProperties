@@ -23,31 +23,12 @@ public class SpecialValidation implements ValidationRule {
     }
 
     public void doSomeThinkStartingFromDate() {
-        if (!date.isEmpty()) {
-            String endDate = date;
-            DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("dd-MM-yyyy");
-            LocalDate limitationFinishDate = LocalDate.parse(endDate, formatter);
-
-            SimpleDateFormat formatter2 = new SimpleDateFormat("dd-MM-yyyy");
-            Date date = new Date(System.currentTimeMillis());
-            String currentDate = formatter2.format(date);
-            LocalDate dateNow = LocalDate.parse(currentDate,formatter);
-
-            System.out.println(limitationFinishDate.compareTo(dateNow));
-
-            if (dateNow.compareTo(limitationFinishDate) < 0) {
-                System.out.println("do  check");
-            }else {
-                System.out.println("not check");
-            }
-
-
-        } else {
-            System.out.println("method do check not running. value is empty or not set");
+        if (!isMustIgnoreValidation()) {
+            doValidationData();
         }
     }
 
-    private boolean isMustDoCheck(){
+    private boolean isMustIgnoreValidation() {
         if (!date.isEmpty()) {
             String endDate = date;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -62,14 +43,18 @@ public class SpecialValidation implements ValidationRule {
 
             if (dateNow.compareTo(limitationFinishDate) < 0) {
                 System.out.println("do  check");
-                return  true;
+                return true;
             } else {
                 System.out.println("not check");
-                return  false;
+                return false;
             }
 
-        }else {
+        } else {
             return false;
         }
+    }
+
+    public void doValidationData() {
+        System.out.println(" I am validate new data from front");
     }
 }

@@ -383,3 +383,6 @@ void valueFromMapByField() {
   address_former_city - Dnipro
   address_former_street - Dniprova
   address_former_house - 22
+  
+  Исчерпывающая документация:
+  https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-Configuration-Binding
